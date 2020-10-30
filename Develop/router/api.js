@@ -1,3 +1,12 @@
+const router = require("express").Router();
+
+router.get()
+router.post();
+router.put();
+
+module.exports = router;
+
+
 const API = {
   async getLastWorkout() {
     let res;
