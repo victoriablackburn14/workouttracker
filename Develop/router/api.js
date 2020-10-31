@@ -1,8 +1,22 @@
 const router = require("express").Router();
 
-router.get()
-router.post();
-router.put();
+const path= require("path");
+
+
+module.exports = function(app){
+  app.get("/index", (req, res) =>{
+    res.sendFile(path.join(__dirname, "./public/exercise.html"));
+    console.log("exercise page")
+  });
+  app.get("/exercise",  (req, res) =>{
+    res.sendFile(path.join(__dirname, "./public/stats.html"));
+    console.log("stats page")
+  });
+};
+
+// router.get()
+// router.post();
+// router.put();
 
 module.exports = router;
 
